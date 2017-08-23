@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Nav from './Components/Nav'
 import Home from './Pages/Home'
-import About from './Pages/About'
+import Record from './Pages/Record'
 
 class App extends React.Component {
   render () {
@@ -18,7 +18,7 @@ class App extends React.Component {
           <div>
             <Nav />
             <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
+            <Route path="/record" component={Record}/>
           </div>
         </BrowserRouter>
       </div>
