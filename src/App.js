@@ -1,20 +1,36 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import Home from './pages/Home'
+import About from './pages/About'
 
-class App extends Component {
-  render() {
+const Nav = () => (
+  <ul>
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/about">About</Link></li>
+  </ul>
+)
+
+class App extends React.Component {
+  render () {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={require('./assets/logo.svg')} className="App-logo" alt="logo" />
-          <h2>Welcome to ID Web App Crash Course</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Web App 2017</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+        <BrowserRouter>
+          <div>
+            <Nav />
+            <hr/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About}/>
+          </div>
+        </BrowserRouter>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
