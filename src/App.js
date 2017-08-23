@@ -1,15 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import Home from './pages/Home'
-import About from './pages/About'
-
-const Nav = () => (
-  <ul>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-  </ul>
-)
+import Nav from './Components/Nav'
+import Home from './Pages/Home'
+import About from './Pages/About'
 
 class App extends React.Component {
   render () {
@@ -23,7 +17,6 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
             <Nav />
-            <hr/>
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
           </div>
