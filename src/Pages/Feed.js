@@ -19,23 +19,26 @@ class Feed extends React.Component {
 
   render () {
     return (
-      <div className="section">
-        <div className="container is-fluid">
-          <div className="content">
+      <div className="section container">
+        <div className="columns is-mobile">
+          <div className="column">
             <h3 className="title">
-              <span aria-label="." role="img">🍶 </span> 
+              <span aria-label="." role="img">🍻 </span> 
               Feed
             </h3>
           </div>
+          <div className="column">
+            <button className="button is-pulled-right is-primary">
+              <span>😛 Add yours</span>
+            </button>
+          </div>
         </div>
 
-        <div className="container">
-          <div className="columns">
-            <FeedCard />
-            <FeedCard />
-            <FeedCard />
-            <FeedCard />
-          </div>
+        <div className="columns">
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
         </div>
 
       </div>

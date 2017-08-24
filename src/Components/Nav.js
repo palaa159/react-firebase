@@ -31,7 +31,11 @@ class Nav extends React.Component {
       <nav className="navbar">
         <div className="navbar-brand">
           <div className="navbar-item">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="x" width="112" height="28" />
+            <div>
+              <span className="is-size-4">
+                Good Karma 💯
+              </span>
+            </div>
           </div>
     
           <div className="navbar-burger" data-target="navMenu" onClick={() => this.toggleBurger()}>

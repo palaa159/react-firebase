@@ -14,9 +14,11 @@ class FeedCard extends React.Component {
         </div>
         <footer className="card-footer">
           <a className="card-footer-item">
+          <span className="has-text-dark" style={{ marginRight: 5 }}>10</span>
             <span className="is-size-5" aria-label="." role="img">❤️</span>
           </a>
           <a className="card-footer-item">
+            <span className="has-text-dark" style={{ marginRight: 5 }}>18</span>
             <span className="is-size-5" aria-label="." role="img">🖐</span>
           </a>
         </footer>

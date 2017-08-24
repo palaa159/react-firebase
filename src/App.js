@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import * as Firebase from './services/firebase'
 import Nav from './Components/Nav'
 import Feed from './Pages/Feed'
+import Map from './Pages/Map'
 import Record from './Pages/Record'
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
           <div>
             <Nav />
             <Route exact path="/" component={Feed}/>
+            <Route path="/map" component={Map}/>
             <Route path="/record" component={Record}/>
           </div>
         </BrowserRouter>
