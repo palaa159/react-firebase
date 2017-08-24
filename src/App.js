@@ -1,11 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import * as Firebase from './services/firebase'
 import Nav from './Components/Nav'
-import Home from './Pages/Home'
+import Feed from './Pages/Feed'
 import Record from './Pages/Record'
 
 class App extends React.Component {
+
+  componentWillMount() {
+    Firebase.init()
+  }
+
   render () {
     return (
       <div>
@@ -17,7 +23,7 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
             <Nav />
-            <Route exact path="/" component={Home}/>
+            <Route exact path="/" component={Feed}/>
             <Route path="/record" component={Record}/>
           </div>
         </BrowserRouter>
